@@ -4,16 +4,33 @@ import java.util.ArrayList;
 
 public class DrugDataRepository {
 
-    public ArrayList<DrugDataModel> getDrugData() {
+    public static ArrayList<DrugDataModel> getDrugData() {
         ArrayList<DrugDataModel> dataModels = new ArrayList<>();
 
-        final String[]   lines      = RAW_DATA_1.split("\n");
-        final String[][] dataValues = new String[lines.length][];
-        for (int i = 0; i < lines.length; ++i) {
-            dataValues[i] = lines[i].split(",");
-        }
+        parseRawData(dataModels, RAW_DATA_1, true);
+        parseRawData(dataModels, RAW_DATA_2, false);
+        parseRawData(dataModels, RAW_DATA_3, false);
+        parseRawData(dataModels, RAW_DATA_4, false);
 
         return dataModels;
+    }
+
+    private static void parseRawData(ArrayList<DrugDataModel> dataModels, String dataString, boolean ignoreFirstLine) {
+        final int startingLine = (ignoreFirstLine) ? 1 : 0;
+
+        final String[]   lines      = dataString.split("\n");
+        final String[][] dataValues = new String[lines.length - startingLine][];
+        String cleanLine;
+        for (int i = startingLine; i < lines.length; ++i) {
+            cleanLine = lines[i].replace("\"", "");
+            dataValues[i - startingLine] = cleanLine.split(",");
+            dataModels.add(new DrugDataModel(
+                    Integer.parseInt(dataValues[i - startingLine][0]),
+                    dataValues[i - startingLine][1],
+                    dataValues[i - startingLine][2],
+                    dataValues[i - startingLine][3],
+                    dataValues[i - startingLine][4]));
+        }
     }
 
     private static final String RAW_DATA_1 = "id,company,drug_brand_name,icd10_diagnosis_code,icd10_dx_desc\n" +
