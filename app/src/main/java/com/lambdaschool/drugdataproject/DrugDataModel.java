@@ -31,4 +31,10 @@ public class DrugDataModel {
     public String getIcd10DxDesc() {
         return icd10DxDesc;
     }
+
+
+    @Override
+    public String toString() {
+        return String.format("ID: %d\nCompany: %s\nDrug Brand Name: %s\n Diagnosis: %s\n Dx Description: %s", id, company, drugBrandName, icd10DiagnosisCode, icd10DxDesc);
+    }
 }

@@ -18,6 +18,10 @@ public class DrugDataAPI {
     }
 
     public static DrugDataModel getByBrandName(String brandName) {
+        if(dataSet == null) {
+            populateDrugData();
+        }
+
         for (DrugDataModel model: dataSet) {
             if(model.getDrugBrandName().toLowerCase().equals(brandName.toLowerCase())) {
                 return model;
