@@ -17,6 +17,21 @@ public class DrugDataAPI {
         return dataSet;
     }
 
+    public static ArrayList<DrugDataModel> getByPartialBrandName(String target) {
+        if(dataSet == null) {
+            populateDrugData();
+        }
+
+        ArrayList<DrugDataModel> results = new ArrayList<>();
+
+        for (DrugDataModel model: dataSet) {
+            if(model.getDrugBrandName().toLowerCase().contains(target.toLowerCase())) {
+                results.add(model);
+            }
+        }
+        return results;
+    }
+
     public static DrugDataModel getByBrandName(String brandName) {
         if(dataSet == null) {
             populateDrugData();
