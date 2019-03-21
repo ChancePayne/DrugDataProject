@@ -1,6 +1,20 @@
 package com.lambdaschool.drugdataproject;
 
+import java.util.ArrayList;
+
 public class DrugDataRepository {
+
+    public ArrayList<DrugDataModel> getDrugData() {
+        ArrayList<DrugDataModel> dataModels = new ArrayList<>();
+
+        final String[] lines = RAW_DATA.split("\n");
+        final String[][] dataValues = new String[lines.length][];
+        for(int i = 0; i < lines.length; ++i) {
+            dataValues[i] = lines[i].split(",");
+        }
+
+        return dataModels;
+    }
 
     private final String RAW_DATA = "id,company,drug_brand_name,icd10_diagnosis_code,icd10_dx_desc\n" +
                                     "1,Western Family Foods Inc,miconazole 3,S52202G,\"Unspecified fracture of shaft of left ulna, subsequent encounter for closed fracture with delayed healing\"\n" +
