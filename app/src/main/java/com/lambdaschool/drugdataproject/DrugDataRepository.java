@@ -16,7 +16,7 @@ public class DrugDataRepository {
         return dataModels;
     }
 
-    private final        String RAW_DATA_1 = "id,company,drug_brand_name,icd10_diagnosis_code,icd10_dx_desc\n" +
+    private static final String RAW_DATA_1 = "id,company,drug_brand_name,icd10_diagnosis_code,icd10_dx_desc\n" +
                                              "1,Western Family Foods Inc,miconazole 3,S52202G,\"Unspecified fracture of shaft of left ulna, subsequent encounter for closed fracture with delayed healing\"\n" +
                                              "2,Conopco Inc. d/b/a Unilever,Axe,S82444G,\"Nondisplaced spiral fracture of shaft of right fibula, subsequent encounter for closed fracture with delayed healing\"\n" +
                                              "3,\"Chattem, Inc.\",Kaopectate Regular Strength Vanilla Flavor Anti Diarrheal,T491X4A,\"Poisoning by antipruritics, undetermined, initial encounter\"\n" +
@@ -265,8 +265,8 @@ public class DrugDataRepository {
                                              "246,Kramer Novis,G-P-TUSS DXP,T423X6,Underdosing of barbiturates\n" +
                                              "247,Bare Escentuals Beauty Inc.,bareMinerals READY Touch Up Veil Broad Spectrum SPF 15,S99009G,\"Unspecified physeal fracture of unspecified calcaneus, subsequent encounter for fracture with delayed healing\"\n" +
                                              "248,\"WESTERN FAMILY FOODS, INC.\",Western Family Broad Spectrum SunscreenSPF 50,T24631S,\"Corrosion of second degree of right lower leg, sequela\"\n" +
-                                             "249,Major Pharmaceuticals,SudoGest,S52236F,\"Nondisplaced oblique fracture of shaft of unspecified ulna, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with routine healing\"\n" +
-                                             "250,\"Vitality Works, Inc.\",THY-Plex,T2150XS,\"Corrosion of first degree of trunk, unspecified site, sequela\"\n" +
+                                             "249,Major Pharmaceuticals,SudoGest,S52236F,\"Nondisplaced oblique fracture of shaft of unspecified ulna, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with routine healing\"\n";
+    private static final String RAW_DATA_2 = "250,\"Vitality Works, Inc.\",THY-Plex,T2150XS,\"Corrosion of first degree of trunk, unspecified site, sequela\"\n" +
                                              "251,Cardinal Health,Lidocaine Hydrochloride,T374X4,\"Poisoning by anthelminthics, undetermined\"\n" +
                                              "252,\"Nelco Laboratories, Inc.\",Brussels Sprout,T40696,Underdosing of other narcotics\n" +
                                              "253,\"Takeda Pharmaceuticals America, Inc.\",Amitiza,S52252K,\"Displaced comminuted fracture of shaft of ulna, left arm, subsequent encounter for closed fracture with nonunion\"\n" +
@@ -516,7 +516,7 @@ public class DrugDataRepository {
                                              "497,\"Carlsbad Technology, Inc.\",Glimepiride,T420X2D,\"Poisoning by hydantoin derivatives, intentional self-harm, subsequent encounter\"\n" +
                                              "498,\"Humco holding Group, Inc.\",Humco Calamine,S82134D,\"Nondisplaced fracture of medial condyle of right tibia, subsequent encounter for closed fracture with routine healing\"\n" +
                                              "499,\"WestAir Gases & Equipment, Inc.\",Air,S3150,Unspecified open wound of unspecified external genital organs\n";
-    private static final String RAW_DATA_2 = "500,\"Forest Laboratories, Inc.\",Celexa,V9026XA,\"Drowning and submersion due to falling or jumping from burning (nonpowered) inflatable craft, initial encounter\"\n" +
+    private static final String RAW_DATA_3 = "500,\"Forest Laboratories, Inc.\",Celexa,V9026XA,\"Drowning and submersion due to falling or jumping from burning (nonpowered) inflatable craft, initial encounter\"\n" +
                                              "501,\"Antigen Laboratories, Inc.\",Treatment Set TS329197,S63222S,\"Subluxation of unspecified interphalangeal joint of right middle finger, sequela\"\n" +
                                              "502,\"SPIRIT PHARMACEUTICALS,LLC\",D - TIME,S53023A,\"Posterior subluxation of unspecified radial head, initial encounter\"\n" +
                                              "503,\"Crossing Cultures, LLC dba Goddess Garden\",GODDESS GARDEN ORGANICS Lavender Mint DAILY BROAD SPECTRUM SPF 15,S33131,Dislocation of L3/L4 lumbar vertebra\n" +
@@ -765,8 +765,8 @@ public class DrugDataRepository {
                                              "746,\"Avon Products, Inc.\",Advance Techniques Keep Clear,S8264XJ,\"Nondisplaced fracture of lateral malleolus of right fibula, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with delayed healing\"\n" +
                                              "747,\"Nelco Laboratories, Inc.\",Brazil Nut,W2181,Striking against or struck by football helmet\n" +
                                              "748,\"Whisk Products, Inc.\",WhiskCare 387,M611,Myositis ossificans progressiva\n" +
-                                             "749,Washington Homeopathic Products,Phytolacca Kit Refill,T189XXA,\"Foreign body of alimentary tract, part unspecified, initial encounter\"\n" +
-                                             "750,Zydus Pharmaceuticals (USA) Inc.,Haloperidol,Y92828,Other wilderness area as the place of occurrence of the external cause\n" +
+                                             "749,Washington Homeopathic Products,Phytolacca Kit Refill,T189XXA,\"Foreign body of alimentary tract, part unspecified, initial encounter\"\n";
+    private static final String RAW_DATA_4 = "750,Zydus Pharmaceuticals (USA) Inc.,Haloperidol,Y92828,Other wilderness area as the place of occurrence of the external cause\n" +
                                              "751,\"JHP Pharmaceuticals, LLC\",dantrolene sodium,S82441F,\"Displaced spiral fracture of shaft of right fibula, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with routine healing\"\n" +
                                              "752,\"Nelco Laboratories, Inc.\",Epicoccum nigrum,W908,Exposure to other nonionizing radiation\n" +
                                              "753,International Beauty Exchange,DERMACLAIR SKIN LIGHTENING,Y37500A,\"Military operations involving unspecified effect of nuclear weapon, military personnel, initial encounter\"\n" +
